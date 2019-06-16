@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+    android:layout_marginTop="70dp"
     tools:context=".Fragments.PartidosFragment">
 
     <LinearLayout
@@ -13,12 +14,13 @@
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         android:paddingRight="10dp"
-        android:paddingTop="15dp"
         android:paddingLeft="10dp">
 
-        <include layout="@layout/partidos">
-
-        </include>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/RecyclerViewPartidos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true" />
 
     </LinearLayout>
 

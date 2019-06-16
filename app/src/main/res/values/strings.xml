@@ -6,4 +6,13 @@
     <string name="menuEquipos">Equipos</string>
     <string name="menuPartidos">Partidos</string>
     <string name="menuOtro">otro</string>
+    <string name="PJ">PJ</string>
+    <string name="G">G</string>
+    <string name="E">E</string>
+    <string name="P">P</string>
+    <string name="GF">GF</string>
+    <string name="GC">GC</string>
+    <string name="DG">DG</string>
+    <string name="Pts">Pts</string>
+
 </resources>

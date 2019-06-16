@@ -26,11 +26,14 @@ import static com.bumptech.glide.gifdecoder.GifHeaderParser.TAG;
 
 public class ListaPartidosAdarpter extends RecyclerView.Adapter<ListaPartidosAdarpter.ViewHolder>{
 
-    Context context;
+    Activity activity;
+    int resource;
     ArrayList<Partido> listaPartidos;
 
-    public ListaPartidosAdarpter(Context context){
-        this.context=context;
+
+    public ListaPartidosAdarpter(int resource,Activity activity){
+        this.activity=activity;
+        this.resource=resource;
         listaPartidos= new ArrayList<>();
     }
 
@@ -46,7 +49,7 @@ public class ListaPartidosAdarpter extends RecyclerView.Adapter<ListaPartidosAda
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
         Partido partido = listaPartidos.get(i);
         viewHolder.nombreEquipoUno.setText(partido.getNombreEquipo1());
-        Glide.with(context)
+        Glide.with(activity)
                 .load("http://flags.fmcdn.net/data/flags/w580/" + partido.getUrlEquipo1())
                 .centerCrop()
                 .crossFade()
@@ -55,7 +58,7 @@ public class ListaPartidosAdarpter extends RecyclerView.Adapter<ListaPartidosAda
         viewHolder.golesEquipos.setText(partido.getGolesEquipo1()+" - " +partido.getGolesEquipo2());
 
         viewHolder.nombreEquipoDos.setText(partido.getNombreEquipo2());
-        Glide.with(context)
+        Glide.with(activity)
                 .load("http://flags.fmcdn.net/data/flags/w580/" + partido.getUrlEquipo2())
                 .centerCrop()
                 .crossFade()
@@ -77,7 +80,6 @@ public class ListaPartidosAdarpter extends RecyclerView.Adapter<ListaPartidosAda
 
     @Override
     public int getItemCount() {
-        Log.e(TAG, " tamaño "+ listaPartidos.size());
         return listaPartidos.size();
     }
 
