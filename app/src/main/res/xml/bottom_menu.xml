@@ -4,23 +4,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/search"
-        android:title="@string/menuEquipos"
-        app:showAsAction="ifRoom"
-        android:icon="@drawable/equiposicon">
-    </item>
-
-    <item
-        android:id="@+id/home"
+        android:id="@+id/partidosItem"
         android:title="@string/menuPartidos"
         app:showAsAction="ifRoom"
-        android:icon="@drawable/partidosicon">
-    </item>
+        android:icon="@drawable/partidosicon"/>
 
     <item
-        android:id="@+id/profile"
-        android:title="@string/menuOtro"
-        app:showAsAction="ifRoom">
-    </item>
+        android:id="@+id/equiposItem"
+        android:title="@string/menuEquipos"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/equiposicon"/>
+
 
 </menu>
