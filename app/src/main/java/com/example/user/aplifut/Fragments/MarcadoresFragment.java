@@ -28,8 +28,6 @@ public class MarcadoresFragment extends Fragment {
 
     private ArrayList<Marcador> dbMarcadores;
 
-    private static final String TAG = "FUTAPIMARCADOR";
-
     private Retrofit retrofit;
 
     private RecyclerView recyclerView;
@@ -61,7 +59,6 @@ public class MarcadoresFragment extends Fragment {
                 .build();
 
         getMarcadores();
-
         return view;
     }
 

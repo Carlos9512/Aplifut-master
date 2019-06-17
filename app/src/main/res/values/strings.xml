@@ -15,5 +15,6 @@
     <string name="GC">GC</string>
     <string name="DG">DG</string>
     <string name="Pts">Pts</string>
+    <string name="scan_canceled">Cancelado</string>
 
 </resources>

@@ -6,22 +6,18 @@
     <item
         android:id="@+id/partidosItem"
         android:title="@string/menuPartidos"
-        app:showAsAction="ifRoom"
         android:icon="@drawable/partidosicon"
-        android:checkable="true"
         />
 
     <item
         android:id="@+id/equiposItem"
         android:title="@string/menuEquipos"
-        app:showAsAction="ifRoom"
         android:icon="@drawable/equiposicon"/>
 
     <item
         android:id="@+id/marcadoresItem"
         android:title="@string/menuMarcadores"
-        app:showAsAction="ifRoom"
-        android:icon="@drawable/equiposicon"/>
+        android:icon="@drawable/marcadoresicon"/>
 
 
 </menu>
