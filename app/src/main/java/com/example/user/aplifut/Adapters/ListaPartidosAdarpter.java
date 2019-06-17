@@ -1,39 +1,39 @@
-package com.example.user.aplifut;
+package com.example.user.aplifut.Adapters;
 
 import android.app.Activity;
-import android.content.Context;
-import android.content.Intent;
+import android.os.AsyncTask;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.QuickContactBadge;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.example.user.aplifut.R;
+import com.example.user.aplifut.Room.Marcador;
+import com.example.user.aplifut.Room.MarcadorDatabaseAccesor;
 import com.example.user.aplifut.models.Partido;
 
 import java.util.ArrayList;
-import java.util.List;
-
-import retrofit2.Retrofit;
-
-import static com.bumptech.glide.gifdecoder.GifHeaderParser.TAG;
+import java.util.logging.Handler;
+import java.util.logging.LogRecord;
 
 public class ListaPartidosAdarpter extends RecyclerView.Adapter<ListaPartidosAdarpter.ViewHolder>{
 
     Activity activity;
+    int y;
     int resource;
     ArrayList<Partido> listaPartidos;
-
 
     public ListaPartidosAdarpter(int resource,Activity activity){
         this.activity=activity;
         this.resource=resource;
+        this.y=0;
         listaPartidos= new ArrayList<>();
     }
 
@@ -47,7 +47,7 @@ public class ListaPartidosAdarpter extends RecyclerView.Adapter<ListaPartidosAda
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
-        Partido partido = listaPartidos.get(i);
+        final Partido partido = listaPartidos.get(i);
         viewHolder.nombreEquipoUno.setText(partido.getNombreEquipo1());
         Glide.with(activity)
                 .load("http://flags.fmcdn.net/data/flags/w580/" + partido.getUrlEquipo1())
@@ -65,17 +65,51 @@ public class ListaPartidosAdarpter extends RecyclerView.Adapter<ListaPartidosAda
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .into(viewHolder.imgEquipoDos);
 
-
         viewHolder.fecha.setText(partido.getFecha());
         viewHolder.estado.setText(partido.getEstado());
 
-        viewHolder.imgEquipoUno.setOnClickListener(new View.OnClickListener() {
+        viewHolder.linearCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                y++;
+                v.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        if (y==1){
+                        }else if (y==2){
+                            Marcador marcador = new Marcador(partido.getNombreEquipo1(),partido.getUrlEquipo1(),partido.getGolesEquipo1(),partido.getNombreEquipo2(),partido.getUrlEquipo2(),partido.getGolesEquipo2(),partido.getFecha(),partido.getEstadio(),partido.getEstado());
+                            saveMarcador(marcador);
+                            Toast.makeText(activity,"Marcador Guardado",Toast.LENGTH_SHORT).show();
+                        }
+                        y=0;
+                    }
+                },400);
 
             }
         });
 
+
+    }
+
+
+    private void saveMarcador(final Marcador marcador) {
+        class SaveMarcador extends AsyncTask<Void, Void, Void> {
+
+            @Override
+            protected Void doInBackground(Void... voids) {
+                //adding to database
+                MarcadorDatabaseAccesor.getInstance(activity.getApplication()).marcadorDAO().insertMarcador(marcador);
+                return null;
+            }
+
+            @Override
+            protected void onPostExecute(Void aVoid) {
+                super.onPostExecute(aVoid);
+            }
+        }
+
+        SaveMarcador saveMarcador = new SaveMarcador();
+        saveMarcador.execute();
     }
 
     @Override
@@ -90,6 +124,8 @@ public class ListaPartidosAdarpter extends RecyclerView.Adapter<ListaPartidosAda
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
+            LinearLayout linearCard;
+
             TextView nombreEquipoUno;
             ImageView imgEquipoUno;
 
@@ -113,6 +149,7 @@ public class ListaPartidosAdarpter extends RecyclerView.Adapter<ListaPartidosAda
                 nombreEquipoDos = (TextView) itemView.findViewById(R.id.nombreEquipoDos);
                 imgEquipoDos = (ImageView) itemView.findViewById(R.id.imgEquipoDos);
 
+                linearCard = (LinearLayout) itemView.findViewById(R.id.linearCard);
 
                 fecha = (TextView) itemView.findViewById(R.id.fecha);
                 estado = (TextView) itemView.findViewById(R.id.estado);

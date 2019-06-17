@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.user.aplifut.FutApi.FutApiService;
-import com.example.user.aplifut.ListaEquiposAdapter;
+import com.example.user.aplifut.Adapters.ListaEquiposAdapter;
 import com.example.user.aplifut.R;
 import com.example.user.aplifut.models.Equipo;
 import com.example.user.aplifut.models.EquiposRespuesta;
@@ -79,10 +79,6 @@ public class EquiposFragment extends Fragment {
                     EquiposRespuesta equiposRespuesta = response.body();
 
                     ArrayList<Equipo> ListaEquipos = equiposRespuesta.getEquipos();
-                    for (int i = 0; i < ListaEquipos.size(); i++) {
-                        Equipo equi = ListaEquipos.get(i);
-                        Log.d(TAG, "Equipo " + equi.getEquipo());
-                    }
                     listaEquiposAdapter.adicionarEquipos(ListaEquipos);
                 } else {
                     Log.e(TAG, " onResponse: " + response.errorBody());

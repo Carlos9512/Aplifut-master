@@ -9,7 +9,7 @@
     cardview:cardElevation="12dp">
 
     <LinearLayout
-        android:id="@+id/linearCard"
+        android:id="@+id/linearCardMarcador"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -24,7 +24,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/fecha"
+                android:id="@+id/fechaMarcador"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -32,7 +32,7 @@
                 tools:text="Fecha" />
 
             <TextView
-                android:id="@+id/estado"
+                android:id="@+id/estadoMarcador"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -58,7 +58,7 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/imgEquipoUno"
+                    android:id="@+id/imgEquipoUnoMarcador"
                     android:layout_width="110dp"
                     android:layout_height="80dp"
                     android:layout_gravity="center"
@@ -66,7 +66,7 @@
                     android:contentDescription="@string/app_name" />
 
                 <TextView
-                    android:id="@+id/nombreEquipoUno"
+                    android:id="@+id/nombreEquipoUnoMarcador"
                     android:layout_width="99dp"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
@@ -85,7 +85,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/golesEquipos"
+                    android:id="@+id/golesEquiposMarcador"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="40sp"
@@ -104,7 +104,7 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/imgEquipoDos"
+                    android:id="@+id/imgEquipoDosMarcador"
                     android:layout_width="110dp"
                     android:layout_height="80dp"
                     android:layout_gravity="center"
@@ -116,7 +116,7 @@
 
 
                 <TextView
-                    android:id="@+id/nombreEquipoDos"
+                    android:id="@+id/nombreEquipoDosMarcador"
                     android:layout_width="99dp"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"

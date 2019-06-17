@@ -17,5 +17,11 @@
         app:showAsAction="ifRoom"
         android:icon="@drawable/equiposicon"/>
 
+    <item
+        android:id="@+id/marcadoresItem"
+        android:title="@string/menuMarcadores"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/equiposicon"/>
+
 
 </menu>

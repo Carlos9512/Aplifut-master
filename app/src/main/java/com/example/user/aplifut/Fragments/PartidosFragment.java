@@ -11,10 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.user.aplifut.FutApi.FutApiService;
-import com.example.user.aplifut.ListaPartidosAdarpter;
+import com.example.user.aplifut.Adapters.ListaPartidosAdarpter;
 import com.example.user.aplifut.R;
-import com.example.user.aplifut.models.Equipo;
-import com.example.user.aplifut.models.EquiposRespuesta;
 import com.example.user.aplifut.models.Partido;
 import com.example.user.aplifut.models.PartidosRespuesta;
 
@@ -77,10 +75,6 @@ public class PartidosFragment extends Fragment {
                 if (response.isSuccessful()) {
                     PartidosRespuesta partidosRespuesta = response.body();
                     ArrayList<Partido> ListaPartidos = partidosRespuesta.getPartidos();
-                    for (int i = 0; i < ListaPartidos.size(); i++) {
-                        Partido equi = ListaPartidos.get(i);
-                        Log.d(TAG, "Partidos " + equi.getUrlEquipo1());
-                    }
                     listaPartidosAdarpter.adicionarPartidos(ListaPartidos);
                 } else {
                     Log.e(TAG, " onResponse: " + response.errorBody());

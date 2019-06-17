@@ -1,4 +1,4 @@
-package com.example.user.aplifut;
+package com.example.user.aplifut.Adapters;
 
 import android.app.Activity;
 import android.support.annotation.NonNull;
@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.example.user.aplifut.R;
 import com.example.user.aplifut.models.Equipo;
 
 import java.util.ArrayList;

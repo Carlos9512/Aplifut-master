@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.MenuItem;
 
 import com.example.user.aplifut.Fragments.EquiposFragment;
+import com.example.user.aplifut.Fragments.MarcadoresFragment;
 import com.example.user.aplifut.Fragments.PartidosFragment;
 import com.example.user.aplifut.FutApi.FutApiService;
 import com.example.user.aplifut.models.Equipo;
@@ -49,10 +50,14 @@ public class MainActivity extends AppCompatActivity {
                         getSupportFragmentManager().beginTransaction().replace(R.id.conteiner,partidosFragment)
                                 .addToBackStack(null).commit();
                         break;
+                    case R.id.marcadoresItem:
+                        MarcadoresFragment marcadoresFragment = new MarcadoresFragment();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.conteiner,marcadoresFragment)
+                                .addToBackStack(null).commit();
+                        break;
                 }
                 return true;
             }
         });
     }
-
 }
