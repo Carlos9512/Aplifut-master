@@ -4,7 +4,6 @@ package com.example.user.aplifut.Fragments;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -70,39 +69,10 @@ public class PartidosFragment extends Fragment {
 
         obtenerdatos();
 
-        FloatingActionButton floatingActionButton = (FloatingActionButton) view.findViewById(R.id.fab);
-        floatingActionButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                addQR();
-            }
-        });
 
         return view;
     }
 
-    private void addQR() {
-        IntentIntegrator integrator = new IntentIntegrator(getActivity());
-        integrator.initiateScan();
-
-    }
-
-    public void onActivityResult(int requestCode, int resultCode, Intent intent) {
-        if (resultCode == RESULT_OK) {
-            IntentResult scanResult = IntentIntegrator.parseActivityResult(
-                    requestCode, resultCode, intent);
-            if (scanResult != null) {
-                // Handle successful scan
-                String contents = scanResult.getContents();
-                Toast.makeText(getActivity(),"leer codigo", Toast.LENGTH_SHORT)
-                        .show();
-            }
-        } else if (resultCode == RESULT_CANCELED) {
-            Toast.makeText(getActivity(), R.string.scan_canceled, Toast.LENGTH_SHORT)
-                    .show();
-        }
-
-    }
 
     private void obtenerdatos() {
         FutApiService service = retrofit.create(FutApiService.class);

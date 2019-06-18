@@ -27,9 +27,6 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class MarcadoresFragment extends Fragment {
 
     private ArrayList<Marcador> dbMarcadores;
-
-    private Retrofit retrofit;
-
     private RecyclerView recyclerView;
     private ListaMarcadoresAdapter listaMarcadoresAdapter;
 
@@ -52,11 +49,6 @@ public class MarcadoresFragment extends Fragment {
         listaMarcadoresAdapter = new ListaMarcadoresAdapter(R.layout.marcador,getActivity());
 
         recyclerView.setAdapter(listaMarcadoresAdapter);
-
-        retrofit = new Retrofit.Builder()
-                .baseUrl("https://my-json-server.typicode.com/Carlos9512/JsonServer/")
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
 
         getMarcadores();
         return view;

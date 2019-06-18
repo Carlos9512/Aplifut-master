@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ApliFut</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="menuEquipos">Teams</string>
+    <string name="menuPartidos">Games</string>
+    <string name="menuMarcadores">My Markers</string>
+    <string name="PJ">PJ</string>
+    <string name="G">G</string>
+    <string name="E">E</string>
+    <string name="P">P</string>
+    <string name="GF">GF</string>
+    <string name="GC">GC</string>
+    <string name="DG">DG</string>
+    <string name="Pts">Pts</string>
+    <string name="scan_canceled">Cancelled</string>
+    <string name="nombreJugador">Name</string>
+    <string name="apellidoJugador">Last Name</string>
+    <string name="equipoJugador">Team</string>
+    <string name="totalGolesJugador">Total goals</string>
+    <string name="marcadorBorrado">Marker Removed</string>
+    <string name="marcadorGuardado">Saved Market</string>
+
+</resources>

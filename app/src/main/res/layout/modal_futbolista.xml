@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+        <ImageView
+            android:layout_marginTop="40dp"
+            android:id="@+id/fotoFutbolista"
+            android:layout_width="160dp"
+            android:layout_height="180dp"
+            android:background="@color/colorAccent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/nombreJugador" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/apellidoJugador" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/equipoJugador" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="40dp"
+                            android:gravity="center"
+                            android:text="@string/totalGolesJugador" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                        <TextView
+                            android:gravity="center"
+                            android:id="@+id/nombreJugador"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/nombreJugador" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp" />
+
+                        <TextView
+                            android:gravity="center"
+                            android:id="@+id/apellidoJugador"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/apellidoJugador" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp" />
+
+                        <TextView
+                            android:gravity="center"
+                            android:id="@+id/equipoJugador"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/equipoJugador" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp" />
+
+                        <TextView
+                            android:gravity="center"
+                            android:id="@+id/golesJugador"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/totalGolesJugador"
+                            android:layout_marginBottom="40dp"/>
+                </LinearLayout>
+        </LinearLayout>
+
+</LinearLayout>

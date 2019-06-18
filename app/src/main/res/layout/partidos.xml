@@ -75,7 +75,7 @@
             </LinearLayout>
 
             <View
-                android:layout_width="20dp"
+                android:layout_width="10dp"
                 android:layout_height="match_parent" />
 
             <LinearLayout
@@ -88,13 +88,13 @@
                     android:id="@+id/golesEquipos"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="40sp"
+                    android:textSize="30sp"
                     tools:text="02" />
             </LinearLayout>
 
 
             <View
-                android:layout_width="20dp"
+                android:layout_width="10dp"
                 android:layout_height="match_parent" />
 
             <LinearLayout

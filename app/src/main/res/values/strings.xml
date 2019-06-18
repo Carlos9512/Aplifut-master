@@ -6,7 +6,6 @@
     <string name="menuEquipos">Equipos</string>
     <string name="menuPartidos">Partidos</string>
     <string name="menuMarcadores">Mis Marcadores</string>
-    <string name="menuOtro">otro</string>
     <string name="PJ">PJ</string>
     <string name="G">G</string>
     <string name="E">E</string>
@@ -16,5 +15,11 @@
     <string name="DG">DG</string>
     <string name="Pts">Pts</string>
     <string name="scan_canceled">Cancelado</string>
+    <string name="nombreJugador">Nombre</string>
+    <string name="apellidoJugador">Apellido</string>
+    <string name="equipoJugador">Equipo</string>
+    <string name="totalGolesJugador">Goles Totales</string>
+    <string name="marcadorBorrado">Marcador Eliminado</string>
+    <string name="marcadorGuardado">Marcador Guardado</string>
 
 </resources>

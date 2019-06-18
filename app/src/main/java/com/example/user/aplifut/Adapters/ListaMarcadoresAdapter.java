@@ -79,7 +79,7 @@ public class ListaMarcadoresAdapter extends RecyclerView.Adapter<ListaMarcadores
 
                         }else if (y==2){
                             deleteMarcador(marcador);
-                            Toast.makeText(activity,"Marcador Borrado",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(activity,R.string.marcadorBorrado,Toast.LENGTH_SHORT).show();
                             bottomNavigationView.setSelectedItemId(R.id.marcadoresItem);
                         }
                         y=0;
@@ -105,7 +105,6 @@ public class ListaMarcadoresAdapter extends RecyclerView.Adapter<ListaMarcadores
             @Override
             protected void onPostExecute(Void aVoid) {
                 super.onPostExecute(aVoid);
-
             }
         }
 
@@ -124,6 +123,7 @@ public class ListaMarcadoresAdapter extends RecyclerView.Adapter<ListaMarcadores
 
         this.listaMarcadores=listaMarcadores;
         notifyDataSetChanged();
+
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

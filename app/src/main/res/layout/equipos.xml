@@ -5,16 +5,16 @@
     android:id="@+id/EquipoCard"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    cardview:cardCornerRadius="4dp"
     cardview:cardElevation="12dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
         android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
         android:layout_marginBottom="10dp"
+        android:gravity="center"
         android:orientation="horizontal">
 
         <LinearLayout
@@ -25,66 +25,59 @@
 
             <ImageView
                 android:id="@+id/imgEquipo"
-                android:layout_width="90dp"
-                android:layout_height="60dp"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
                 android:layout_gravity="center"
                 android:background="@color/colorAccent"
                 android:contentDescription="@string/app_name" />
 
             <TextView
                 android:id="@+id/nombreEquipo"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/app_name"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:text="@string/app_name" />
         </LinearLayout>
+
         <View
             android:layout_width="10dp"
-            android:layout_height="15dp"/>
+            android:layout_height="15dp" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            >
-
-            <View
-                android:layout_width="30dp"
-                android:layout_height="10dp" />
+            android:gravity="center"
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/PJ"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:text="@string/PJ" />
 
             <View
                 android:layout_width="30dp"
-                android:layout_height="8dp"/>
+                android:layout_height="8dp" />
 
             <TextView
                 android:id="@+id/PJ"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/PJ"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:text="@string/PJ" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            >
-
-            <View
-                android:layout_width="30dp"
-                android:layout_height="10dp" />
+            android:gravity="center"
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/G"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:text="@string/G" />
 
             <View
                 android:layout_width="30dp"
@@ -94,25 +87,20 @@
                 android:id="@+id/G"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/G"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:text="@string/G" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            >
-
-            <View
-                android:layout_width="30dp"
-                android:layout_height="10dp"/>
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/E"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:text="@string/E" />
 
             <View
                 android:layout_width="30dp"
@@ -122,25 +110,21 @@
                 android:id="@+id/E"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/E"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:text="@string/E" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            >
-
-            <View
-                android:layout_width="30dp"
-                android:layout_height="10dp"/>
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/P"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:text="@string/P" />
 
             <View
                 android:layout_width="30dp"
@@ -149,26 +133,22 @@
             <TextView
                 android:id="@+id/P"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/P"
-                android:gravity="center"/>
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:text="@string/P" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            >
-
-            <View
-                android:layout_width="30dp"
-                android:layout_height="10dp"/>
+            android:gravity="center"
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/GF"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:text="@string/GF" />
 
             <View
                 android:layout_width="30dp"
@@ -178,25 +158,21 @@
                 android:id="@+id/GF"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/GF"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:text="@string/GF" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            >
-
-            <View
-                android:layout_width="30dp"
-                android:layout_height="10dp" />
+            android:gravity="center"
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/GC"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:text="@string/GC" />
 
             <View
                 android:layout_width="30dp"
@@ -206,24 +182,21 @@
                 android:id="@+id/GC"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/GC"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:text="@string/GC" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            >
-
-            <View
-                android:layout_width="30dp"
-                android:layout_height="10dp" />
+            android:gravity="center"
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/DG"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:text="@string/DG" />
 
             <View
                 android:layout_width="30dp"
@@ -233,25 +206,22 @@
                 android:id="@+id/DG"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/DG"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:text="@string/DG" />
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            >
-
-            <View
-                android:layout_width="30dp"
-                android:layout_height="10dp" />
+            android:gravity="center"
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/Pts"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:text="@string/Pts" />
 
             <View
                 android:layout_width="30dp"
@@ -261,8 +231,8 @@
                 android:id="@+id/Pts"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/Pts"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:text="@string/Pts" />
         </LinearLayout>
 
     </LinearLayout>

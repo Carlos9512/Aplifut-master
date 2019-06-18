@@ -3,6 +3,7 @@ package com.example.user.aplifut.Adapters;
 import android.app.Activity;
 import android.os.AsyncTask;
 import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,11 +30,13 @@ public class ListaPartidosAdarpter extends RecyclerView.Adapter<ListaPartidosAda
     int y;
     int resource;
     ArrayList<Partido> listaPartidos;
+    BottomNavigationView bottomNavigationView;
 
     public ListaPartidosAdarpter(int resource,Activity activity){
         this.activity=activity;
         this.resource=resource;
         this.y=0;
+        bottomNavigationView = (BottomNavigationView) activity.findViewById(R.id.bottomBar);
         listaPartidos= new ArrayList<>();
     }
 
@@ -79,7 +82,7 @@ public class ListaPartidosAdarpter extends RecyclerView.Adapter<ListaPartidosAda
                         }else if (y==2){
                             Marcador marcador = new Marcador(partido.getNombreEquipo1(),partido.getUrlEquipo1(),partido.getGolesEquipo1(),partido.getNombreEquipo2(),partido.getUrlEquipo2(),partido.getGolesEquipo2(),partido.getFecha(),partido.getEstadio(),partido.getEstado());
                             saveMarcador(marcador);
-                            Toast.makeText(activity,"Marcador Guardado",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(activity,R.string.marcadorGuardado,Toast.LENGTH_SHORT).show();
                         }
                         y=0;
                     }
