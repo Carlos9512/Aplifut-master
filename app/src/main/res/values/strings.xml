@@ -21,5 +21,8 @@
     <string name="totalGolesJugador">Goles Totales</string>
     <string name="marcadorBorrado">Marcador Eliminado</string>
     <string name="marcadorGuardado">Marcador Guardado</string>
+    <string name="tab_Equipos">Equipos</string>
+    <string name="tab_Marcadores">Mis Marcadores</string>
+    <string name="tab_Partidos">Partidos</string>
 
 </resources>

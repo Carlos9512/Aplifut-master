@@ -22,5 +22,8 @@
     <string name="totalGolesJugador">Total goals</string>
     <string name="marcadorBorrado">Marker Removed</string>
     <string name="marcadorGuardado">Saved Market</string>
+    <string name="tab_Equipos">Teams</string>
+    <string name="tab_Marcadores">My Markers</string>
+    <string name="tab_Partidos">Games</string>
 
 </resources>

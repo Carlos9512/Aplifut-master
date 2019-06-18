@@ -5,8 +5,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -53,6 +55,8 @@ public class PartidosFragment extends Fragment {
                              Bundle savedInstanceState) {
         final View view =  inflater.inflate(R.layout.fragment_partidos, container, false);
 
+
+
         recyclerView = (RecyclerView) view.findViewById(R.id.RecyclerViewPartidos);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         linearLayoutManager.setOrientation(linearLayoutManager.VERTICAL);
@@ -98,4 +102,6 @@ public class PartidosFragment extends Fragment {
             }
         });
     }
+
+
 }

@@ -3,8 +3,10 @@ package com.example.user.aplifut.Fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -46,6 +48,8 @@ public class EquiposFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_equipos, container, false);
 
+
+
         recyclerView = (RecyclerView) view.findViewById(R.id.RecyclerViewEquipos);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         linearLayoutManager.setOrientation(linearLayoutManager.VERTICAL);
@@ -65,6 +69,7 @@ public class EquiposFragment extends Fragment {
 
         return view;
     }
+
 
     private void obtenerdatos() {
 
